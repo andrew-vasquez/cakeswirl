@@ -57,40 +57,54 @@ export default function Home() {
         </div>
         
         {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
-            <div className="px-4 py-4 space-y-3">
-              <a 
-                href="#home" 
-                className="block text-gray-700 hover:text-red-600 hover:bg-red-50 px-4 py-2 rounded-lg transition-colors duration-300"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Home
-              </a>
-              <a 
-                href="#cupcakes" 
-                className="block text-gray-700 hover:text-red-600 hover:bg-red-50 px-4 py-2 rounded-lg transition-colors duration-300"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Cupcakes
-              </a>
-              <a 
-                href="#about" 
-                className="block text-gray-700 hover:text-red-600 hover:bg-red-50 px-4 py-2 rounded-lg transition-colors duration-300"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                About Us
-              </a>
-              <a 
-                href="#contact" 
-                className="block bg-red-600 text-white text-center px-6 py-2 rounded-full hover:bg-red-700 transition-colors duration-300"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact
-              </a>
-            </div>
+        <div 
+          className={`md:hidden bg-white border-t border-gray-200 overflow-hidden transition-all duration-300 ease-in-out ${
+            mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 border-t-0'
+          }`}
+        >
+          <div className="px-4 py-4 space-y-3">
+            <a 
+              href="#home" 
+              className={`block text-gray-700 hover:text-red-600 hover:bg-red-50 px-4 py-2 rounded-lg transition-all duration-300 transform ${
+                mobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'
+              }`}
+              style={{ transitionDelay: mobileMenuOpen ? '50ms' : '0ms' }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Home
+            </a>
+            <a 
+              href="#cupcakes" 
+              className={`block text-gray-700 hover:text-red-600 hover:bg-red-50 px-4 py-2 rounded-lg transition-all duration-300 transform ${
+                mobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'
+              }`}
+              style={{ transitionDelay: mobileMenuOpen ? '100ms' : '0ms' }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Cupcakes
+            </a>
+            <a 
+              href="#about" 
+              className={`block text-gray-700 hover:text-red-600 hover:bg-red-50 px-4 py-2 rounded-lg transition-all duration-300 transform ${
+                mobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'
+              }`}
+              style={{ transitionDelay: mobileMenuOpen ? '150ms' : '0ms' }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About Us
+            </a>
+            <a 
+              href="#contact" 
+              className={`block bg-red-600 text-white text-center px-6 py-2 rounded-full hover:bg-red-700 transition-all duration-300 transform ${
+                mobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'
+              }`}
+              style={{ transitionDelay: mobileMenuOpen ? '200ms' : '0ms' }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </a>
           </div>
-        )}
+        </div>
       </nav>
 
       {/* Hero Section */}
