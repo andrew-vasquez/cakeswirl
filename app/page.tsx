@@ -44,7 +44,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 bg-gradient-to-br from-red-50 via-white to-pink-50">
+      <section id="home" className="pt-20 bg-linear-to-br from-red-50 via-white to-pink-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
@@ -153,7 +153,7 @@ export default function Home() {
       </section>
 
       {/* Cupcakes Section */}
-      <section id="cupcakes" className="py-20 bg-gradient-to-b from-white to-red-50">
+      <section id="cupcakes" className="py-20 bg-linear-to-b from-white to-red-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -242,7 +242,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-b from-red-50 to-white">
+      <section className="py-20 bg-linear-to-b from-red-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -325,7 +325,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-red-50 to-pink-50">
+      <section id="contact" className="py-20 bg-linear-to-br from-red-50 to-pink-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Ready to <span className="text-red-600">Taste</span> the Magic?
