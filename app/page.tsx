@@ -1,6 +1,10 @@
+'use client';
+
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const cupcakes = [
     { id: 1, name: "Placeholder", image: "/cupcakes/cupcake1.jpg" },
     { id: 2, name: "Placeholder", image: "/cupcakes/cupcake2.jpg" },
@@ -33,14 +37,60 @@ export default function Home() {
             </div>
             {/* Mobile menu button */}
             <div className="md:hidden">
-              <button className="text-gray-700">
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
+              <button 
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="text-gray-700 hover:text-red-600 transition-colors"
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                )}
               </button>
             </div>
           </div>
         </div>
+        
+        {/* Mobile menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden bg-white border-t border-gray-200">
+            <div className="px-4 py-4 space-y-3">
+              <a 
+                href="#home" 
+                className="block text-gray-700 hover:text-red-600 hover:bg-red-50 px-4 py-2 rounded-lg transition-colors duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Home
+              </a>
+              <a 
+                href="#cupcakes" 
+                className="block text-gray-700 hover:text-red-600 hover:bg-red-50 px-4 py-2 rounded-lg transition-colors duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Cupcakes
+              </a>
+              <a 
+                href="#about" 
+                className="block text-gray-700 hover:text-red-600 hover:bg-red-50 px-4 py-2 rounded-lg transition-colors duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                About Us
+              </a>
+              <a 
+                href="#contact" 
+                className="block bg-red-600 text-white text-center px-6 py-2 rounded-full hover:bg-red-700 transition-colors duration-300"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                Contact
+              </a>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Section */}
