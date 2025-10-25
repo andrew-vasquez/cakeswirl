@@ -187,47 +187,55 @@ export default function Home() {
       </section>
 
       {/* Featured Cake Section */}
-      <section className="py-20 bg-red-600 text-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Custom Cakes for Every Celebration
-              </h2>
-              <p className="text-xl text-red-50 mb-8">
-                From birthdays to weddings, we create stunning custom cakes that are as delicious as they are beautiful. Let us make your special day even sweeter!
-              </p>
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-center text-lg">
-                  <svg className="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Birthday Cakes • Wedding Cakes
-                </li>
-                <li className="flex items-center text-lg">
-                  <svg className="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Corporate Events • Special Occasions
-                </li>
-                <li className="flex items-center text-lg">
-                  <svg className="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                  </svg>
-                  Custom Designs • On-Time Delivery
-                </li>
-              </ul>
-              <a href="#contact" className="inline-block bg-white text-red-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
-                Order Your Custom Cake
-              </a>
-            </div>
-            <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              <Image 
-                src="/cake.png" 
-                alt="Custom Cakes"
-                fill
-                className="object-cover"
-              />
+          <div className="p-8 md:p-12">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Custom <span className="text-red-600">Cakes</span> for Every Celebration
+                </h2>
+                <p className="text-xl text-gray-700 mb-8">
+                  From birthdays to weddings, we create stunning custom cakes that are as delicious as they are beautiful. Let us make your special day even sweeter!
+                </p>
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div className="bg-white p-4 rounded-xl shadow-md">
+                    <div className="text-3xl mb-2">🎂</div>
+                    <h3 className="font-bold text-gray-900 mb-1">Birthday Cakes</h3>
+                    <p className="text-sm text-gray-600">Custom designs</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-xl shadow-md">
+                    <div className="text-3xl mb-2">💒</div>
+                    <h3 className="font-bold text-gray-900 mb-1">Wedding Cakes</h3>
+                    <p className="text-sm text-gray-600">Elegant & stunning</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-xl shadow-md">
+                    <div className="text-3xl mb-2">🎉</div>
+                    <h3 className="font-bold text-gray-900 mb-1">Special Events</h3>
+                    <p className="text-sm text-gray-600">Any occasion</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-xl shadow-md">
+                    <div className="text-3xl mb-2">🚚</div>
+                    <h3 className="font-bold text-gray-900 mb-1">On-Time Delivery</h3>
+                    <p className="text-sm text-gray-600">Guaranteed fresh</p>
+                  </div>
+                </div>
+                <a href="#contact" className="inline-block bg-red-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-700 hover:shadow-lg transition-all duration-300">
+                  Order Your Custom Cake
+                </a>
+              </div>
+              <div className="relative h-96 md:h-[550px]">
+                <div className="absolute inset-0 bg-white rounded-2xl shadow-2xl p-6">
+                  <div className="relative w-full h-full">
+                    <Image 
+                      src="/cake.png" 
+                      alt="Custom Cakes"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
